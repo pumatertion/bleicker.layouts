@@ -152,7 +152,7 @@ class LayoutService implements LayoutServiceInterface {
 	 */
 	public static function layoutFilter($identity) {
 		return function (Layout $layout) use ($identity) {
-			return $layout->getIdentity() === $identity;
+			return (string)$layout->getIdentity() === (string)$identity;
 		};
 	}
 
@@ -162,7 +162,7 @@ class LayoutService implements LayoutServiceInterface {
 	 */
 	public static function columnFilter($identity) {
 		return function (Column $column) use ($identity) {
-			return $column->getIdentity() === $identity;
+			return (string)$column->getIdentity() === (string)$identity;
 		};
 	}
 
@@ -172,7 +172,7 @@ class LayoutService implements LayoutServiceInterface {
 	 */
 	public static function columnGroupFilter($identity) {
 		return function (ColumnGroup $columnGroup) use ($identity) {
-			return $columnGroup->getIdentity() === $identity;
+			return (string)$columnGroup->getIdentity() === (string)$identity;
 		};
 	}
 
