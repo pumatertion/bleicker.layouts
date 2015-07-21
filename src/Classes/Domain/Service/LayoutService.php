@@ -183,7 +183,7 @@ class LayoutService implements LayoutServiceInterface {
 	 */
 	public function addColumnGroupToLayout($columnGroupIdentity, $layoutIdentity) {
 		$columnGroup = $this->getColumnGroup($columnGroupIdentity);
-		$layout = $this->getColumnGroup($layoutIdentity);
+		$layout = $this->getLayout($layoutIdentity);
 		if ($columnGroup === NULL) {
 			$columnGroup = $this->addColumnGroup($columnGroupIdentity);
 		}
