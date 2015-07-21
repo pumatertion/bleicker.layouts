@@ -99,4 +99,11 @@ class ColumnGroup implements ColumnGroupInterface {
 		$this->columns = $columns;
 		return $this;
 	}
+
+	/**
+	 * @return string
+	 */
+	public function __toString() {
+		return $this->getIdentity();
+	}
 }

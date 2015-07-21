@@ -77,4 +77,11 @@ class Column implements ColumnInterface {
 	public function getDescription() {
 		return $this->description;
 	}
+
+	/**
+	 * @return string
+	 */
+	public function __toString() {
+		return $this->getIdentity();
+	}
 }

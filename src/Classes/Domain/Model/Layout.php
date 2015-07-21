@@ -99,4 +99,11 @@ class Layout implements LayoutInterface {
 		$this->columnGroups = $columnGroups;
 		return $this;
 	}
+
+	/**
+	 * @return string
+	 */
+	public function __toString() {
+		return $this->getIdentity();
+	}
 }

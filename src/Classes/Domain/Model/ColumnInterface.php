@@ -22,4 +22,9 @@ interface ColumnInterface {
 	 * @return string
 	 */
 	public function getTitle();
+
+	/**
+	 * @return string
+	 */
+	public function __toString();
 }

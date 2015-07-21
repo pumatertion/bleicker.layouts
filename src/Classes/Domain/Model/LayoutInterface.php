@@ -27,4 +27,9 @@ interface LayoutInterface {
 	 * @return ColumnGroupInterface[]
 	 */
 	public function getColumnGroups();
+
+	/**
+	 * @return string
+	 */
+	public function __toString();
 }
