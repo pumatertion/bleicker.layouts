@@ -247,6 +247,13 @@ class LayoutService implements LayoutServiceInterface {
 	}
 
 	/**
+	 * @return Layout[]
+	 */
+	public function getLayouts() {
+		return $this->layouts;
+	}
+
+	/**
 	 * @return $this
 	 */
 	public function prune() {
