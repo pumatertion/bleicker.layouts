@@ -7,7 +7,7 @@ namespace Bleicker\Layouts\Domain\Model;
  *
  * @package Bleicker\Layouts\Domain\Model
  */
-class Layout {
+class Layout implements LayoutInterface {
 
 	/**
 	 * @var string

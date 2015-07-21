@@ -5,7 +5,6 @@ namespace Bleicker\Layouts\Domain\Service;
 use Bleicker\Layouts\Domain\Model\Layout;
 use Bleicker\Layouts\Domain\Model\Column;
 use Bleicker\Layouts\Domain\Model\ColumnGroup;
-use Bleicker\Layouts\Domain\Service\Exception\ColumnDoesNotExistException;
 use Bleicker\Layouts\Domain\Service\Exception\LayoutAlreadyExistsException;
 use Bleicker\Layouts\Domain\Service\Exception\ColumnAlreadyExistsException;
 use Bleicker\Layouts\Domain\Service\Exception\ColumnGroupAlreadyExistsException;
@@ -16,7 +15,7 @@ use Closure;
  *
  * @package Bleicker\Layouts\Domain\Service
  */
-class LayoutService {
+class LayoutService implements LayoutServiceInterface {
 
 	/**
 	 * @var Layout[]
@@ -180,7 +179,7 @@ class LayoutService {
 	/**
 	 * @param string $columnGroupIdentity
 	 * @param string $layoutIdentity
-	 * @return $this;
+	 * @return $this
 	 */
 	public function addColumnGroupToLayout($columnGroupIdentity, $layoutIdentity) {
 		$columnGroup = $this->getColumnGroup($columnGroupIdentity);
@@ -215,7 +214,7 @@ class LayoutService {
 	/**
 	 * @param string $columnIdentity
 	 * @param string $groupIdentity
-	 * @return $this;
+	 * @return $this
 	 */
 	public function addColumnToGroup($columnIdentity, $groupIdentity) {
 		$column = $this->getColumn($columnIdentity);

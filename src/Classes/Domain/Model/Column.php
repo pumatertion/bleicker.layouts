@@ -7,7 +7,7 @@ namespace Bleicker\Layouts\Domain\Model;
  *
  * @package Bleicker\Layouts\Domain\Model
  */
-class Column {
+class Column implements ColumnInterface {
 
 	/**
 	 * @var string
